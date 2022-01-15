@@ -1,0 +1,57 @@
+%reset-border {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+.zuik-table {
+    border-collapse: collapse;
+    border-color: var(--zuik-color-text-second);
+    caption-side: bottom;
+    color: var(--zuik-color-text-main);
+    margin-bottom: 1em;
+    vertical-align: top;
+    width: 100%;
+
+    >:not(caption)>*>* {
+        background-color: transparent;
+        border-bottom-width: 1px;
+        padding: 0.5rem 0.5rem;
+    }
+
+    >:not(:first-child) {
+        border-top: 2px solid;
+    }
+
+    thead {
+        vertical-align: bottom;
+
+        @extend %reset-border;
+    }
+
+    tfoot {
+        vertical-align: top;
+
+        @extend %reset-border;
+    }
+
+    tbody {
+        vertical-align: center;
+
+        @extend %reset-border;
+    }
+
+    tr {
+        @extend %reset-border;
+    }
+
+    th {
+        color: var(--zuik-color-text-second);
+
+        @extend %reset-border;
+    }
+
+    td {
+        @extend %reset-border;
+    }
+}

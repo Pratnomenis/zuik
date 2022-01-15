@@ -1,0 +1,63 @@
+.zuik-range {
+    -webkit-appearance: none;
+    background: transparent;
+    color: var(--zuik-color-text-main);
+    display: inline-block;
+    height: 3em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        bottom: 0;
+        content: attr(min) attr(data-mark);
+        display: inline-block;
+        font-size: .7em;
+        font-weight: 100;
+        left: 0;
+        position: absolute;
+    }
+
+    &::after {
+        bottom: 0;
+        content: attr(max) attr(data-mark);
+        display: inline-block;
+        font-size: .7em;
+        font-weight: 100;
+        position: absolute;
+        right: 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+        background: linear-gradient(to bottom, var(--zuik-color-gradient-left), var(--zuik-color-gradient-right));
+        border-radius: .3em;
+        cursor: pointer;
+        display: block;
+        height: 2em;
+        left: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        background: linear-gradient(to bottom, var(--zuik-color-gradient-left), var(--zuik-color-gradient-right)) center center no-repeat;
+        border-radius: .3em;
+        border: .2em solid transparent;
+        cursor: pointer;
+        height: 2em;
+        width: .7em;
+
+        box-shadow: calc(100vw + .35em) 0 0 100vw var(--zuik-color-text-second),
+            inset 0 0 0 .3em var(--zuik-color-bg-second);
+    }
+}

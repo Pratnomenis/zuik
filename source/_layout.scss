@@ -1,0 +1,29 @@
+.zuik {
+    
+    &__header {
+        background-color: var(--zuik-color-bg-main);
+        height: 3em;
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    &__main {
+        height: calc(100% - 6em);
+        inset: 3em 0 3em 0;
+        overflow: hidden auto;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__footer {
+        bottom: 0;
+        box-shadow: 0 0 0 1px var(--zuik-color-text-second);
+        height: 3em;
+        left: 0;
+        position: fixed;
+        z-index: 10;
+    }
+}

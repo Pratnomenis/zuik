@@ -1,0 +1,43 @@
+.zuik-switch {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+
+    &::before {
+        background: linear-gradient(to bottom, var(--zuik-color-text-second), var(--zuik-color-text-second));
+        border-radius: 1em;
+        content: '';
+        display: block;
+        height: 2em;
+        transition: all .3s;
+        width: 3.5em;
+    }
+
+    &::after {
+        background: var(--zuik-color-bg-second);
+        border-radius: 1em;
+        content: '';
+        display: block;
+        height: 1.4em;
+        left: 0.3em;
+        position: absolute;
+        top: calc(50% - .7em);
+        transition: all .2s;
+        width: 1.4em;
+    }
+
+    &:checked {
+
+        &::before {
+            background: linear-gradient(to bottom, var(--zuik-color-gradient-left), var(--zuik-color-gradient-right));
+        }
+
+        &::after {
+            left: 1.8em;
+        }
+    }
+}

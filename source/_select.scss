@@ -1,0 +1,46 @@
+.zuik-select {
+    appearance: none;
+    background-color: var(--zuik-color-bg-main);
+    background-repeat: no-repeat;
+    background-size: .4em .4em;
+    border-radius: 0.35em;
+    border: 1px solid var(--zuik-color-text-second);
+    box-shadow: none;
+    box-sizing: border-box;
+    color: var(--zuik-color-text-main);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 2em;
+    line-height: 1;
+    margin: 0;
+    max-width: 100%;
+    padding: 0 1.7em 0 0.5em;
+    position: relative;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--zuik-color-text-second) 50%, var(--zuik-color-text-second) calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(-45deg, transparent 50%, var(--zuik-color-text-second) 50%, var(--zuik-color-text-second) calc(50% + 1px), transparent calc(50% + 1px));
+    background-position:
+        right 1em top calc(.85em),
+        right .68em top calc(.85em);
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    option {
+        font-weight: normal;
+    }
+}
+
+/*
+    TODO: add rtl support
+*/

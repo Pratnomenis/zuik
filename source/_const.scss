@@ -1,0 +1,52 @@
+@mixin light-consts {
+    --zuik-color-bg-main: #f5f7fa;
+    --zuik-color-bg-second: #fff;
+    --zuik-color-gradient-left: #06a0eb;
+    --zuik-color-gradient-right: #1ec0fb;
+    --zuik-color-gray: #999;
+    --zuik-color-text-main: #123354;
+    --zuik-color-text-second: #7a8ca1;
+}
+
+@mixin dark-consts {
+    --zuik-color-bg-main: #1e2529;
+    --zuik-color-bg-second: #171d20;
+    --zuik-color-gradient-left: #bde6fb;
+    --zuik-color-gradient-right: #bde6fb;
+    --zuik-color-gray: #999;
+    --zuik-color-text-main: #bde6fb;
+    --zuik-color-text-second: #758e9b;
+}
+
+:root {
+    @include light-consts;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-consts;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        @include light-consts;
+    }
+}
+
+.zuik__light {
+    @include light-consts;
+}
+
+.zuik__dark {
+    @include dark-consts;
+}
+
+.zuik,
+.zuik__dark {
+    background-color: var(--zuik-color-bg-main);
+    color: var(--zuik-color-text-main);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    line-height: 1.5;
+}

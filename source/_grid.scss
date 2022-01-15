@@ -1,0 +1,69 @@
+@use "sass:math";
+
+@mixin make-col($size: false, $columns: $grid-columns) {
+    flex: 0 0 auto;
+    width: percentage(math.div($size, $columns));
+}
+
+.zuik {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 100%;
+
+    &-row {
+        background-color: var(--zuik-color-bg-main);
+        color: var(--zuik-color-text-main);
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        margin-left: -.5em;
+        margin-right: -.5em;
+        margin-top: 0;
+        padding-bottom: .5em;
+        padding-top: .5em;
+
+        &>* {
+            flex-shrink: 0;
+            max-width: 100%;
+            padding-left: .5em;
+            padding-right: .5em;
+            width: 100%;
+        }
+
+        &:nth-child(even) {
+            background-color: var(--zuik-color-bg-second);
+        }
+    }
+
+    &-col {
+        flex: 1 0 0%;
+
+        &>*:first-of-type{
+            margin-left: 0;
+        }
+
+        &>*:last-of-type {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+
+        @for $i from 1 through 12 {
+            &-#{$i} {
+                @include make-col($i, 12);
+
+                &>*:first-of-type{
+                    margin-left: 0;
+                }
+        
+                &>*:last-of-type {
+                    margin-bottom: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+}

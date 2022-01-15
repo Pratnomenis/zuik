@@ -1,0 +1,119 @@
+%header {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    user-select: text;
+}
+
+.zuik {
+    -webkit-text-size-adjust: 100%;
+
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    &-h1,
+    h1 {
+        font-size: calc(1.375em + 1.5vw);
+
+        @extend %header;
+    }
+
+    &-h2,
+    h2 {
+        font-size: calc(1.325em + .9vw);
+
+        @extend %header;
+    }
+
+    &-h3,
+    h3 {
+        font-size: calc(1.3em + .6vw);
+
+        @extend %header;
+    }
+
+    &-h4,
+    h4 {
+        font-size: calc(1.275em + .3vw);
+
+        @extend %header;
+    }
+
+    &-h5,
+    h5 {
+        font-size: 1.25em;
+
+        @extend %header;
+    }
+
+    &-h6,
+    h6 {
+        font-size: 1em;
+
+        @extend %header;
+    }
+
+    &-p,
+    p {
+        font-size: 1em;
+        margin-bottom: 1em;
+        margin-top: 0;
+        user-select: text;
+    }
+
+    &-mark,
+    mark {
+        background-color: transparent;
+        color: var(--zuik-color-text-second);
+        padding: 0.2em;
+    }
+
+    &-del,
+    del,
+    &-s,
+    s {
+        opacity: .5;
+        text-decoration: line-through;
+    }
+
+    &-ins,
+    ins,
+    &-u,
+    u {
+        text-decoration: underline;
+    }
+
+    &-small,
+    small {
+        color: var(--zuik-color-text-second);
+        font-size: .875em;
+    }
+
+    &-strong,
+    strong,
+    &-b,
+    b {
+        font-weight: bolder;
+    }
+
+    &-em,
+    em {
+        font-style: italic;
+    }
+
+    pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+
+    abbr[title] {
+        border-bottom: none;
+        text-decoration: underline dotted;
+        text-decoration: underline;
+    }
+}

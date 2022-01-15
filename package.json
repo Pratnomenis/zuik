@@ -1,0 +1,23 @@
+{
+  "name": "zuik",
+  "description": "UI kit for znyatok",
+  "version": "0.1.0",
+  "scripts": {
+    "dist": "sass --style=compressed source/index.scss dist/zuik.min.css",
+    "watch": "live-server --browser='Google Chrome' --watch=dist & sass --watch source/index.scss:dist/zuik.min.css"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "electron",
+    "znyatok",
+    "ui",
+    "elements"
+  ],
+  "author": "Boris Savenko (https://www.linkedin.com/in/boris-savenko/)",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.47.0"
+  }
+}

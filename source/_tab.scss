@@ -1,0 +1,42 @@
+.zuik-tab {
+    
+    &--list {
+        align-items: flex-end;
+        background: var(--zuik-color-bg-second);
+        box-shadow: inset 0 -1px 0 0 var(--zuik-color-text-second), 0 0 10px 5px var(--zuik-color-bg-main);
+        display: flex;
+        font-family: inherit;
+        font-size: 1em;
+        height: 3em;
+        justify-content: end;
+        margin: 0 -.5em;
+        width: auto;
+    }
+
+    &--item {
+        background: var(--zuik-color-bg-second);
+        border-radius: .35em .35em 0 0;
+        border: none;
+        box-shadow: inset 0 0 0 1px var(--zuik-color-text-second);
+        color: var(--zuik-color-text-main);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1em;
+        height: 2.5em;
+        margin: 0 .5em;
+        min-width: 3em;
+        padding: 0 .5em;
+        transition: background-color .3s;
+        
+        &:hover {
+            background: var(--zuik-color-bg-main);
+        }
+
+        &__active {
+            background: var(--zuik-color-bg-main);
+            box-shadow: inset 0 -1px 0 0px var(--zuik-color-bg-main), inset 0 0 0 1px var(--zuik-color-text-second);
+            color: var(--zuik-color-text-second);
+            cursor: default;
+        }
+    }
+}
