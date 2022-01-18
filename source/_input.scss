@@ -1,0 +1,24 @@
+.zuik-input{
+    appearance: none;
+    background: transparent;
+    border-radius: 0.35em;
+    border: 1px solid var(--zuik-color-text-second);
+    box-shadow: none;
+    color: var(--zuik-color-text-main);
+    cursor: text;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 2em;
+    line-height: 1;
+    margin: 0;
+    max-width: 100%;
+    padding: 0 0.5em;
+    position: relative;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
