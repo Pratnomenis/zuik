@@ -1,4 +1,4 @@
-.zuik-input{
+.zuik-input {
     appearance: none;
     background: transparent;
     border-radius: 0.35em;
@@ -20,5 +20,11 @@
 
     &:focus {
         outline: none;
+    }
+
+    &[readonly],
+    &__readonly {
+        color: var(--zuik-color-text-second);
+        text-align: center;
     }
 }
