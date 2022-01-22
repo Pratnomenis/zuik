@@ -25,13 +25,18 @@
     </header>
     <main class="zuik zuik__main">
         <section class="zuik-row">
-            <div class="zuik-col">
+            <div class="zuik-col-12">
                 <h2>Znyatok UI Kit v0.1.1</h2>
                 <h3>Lorem ipsum dolor, sit amet</h3>
                 <p>consectetur <mark>adipisicing</mark> elit. Quisquam qui sed dicta reiciendis veniam officia
                     laudantium perspiciatis mollitia, <small> ipsa voluptatum exercitationem placeat debitis fuga
                         nostrum illo,
                         officiis iste consequuntur nemo!</small></p>
+                <hr>
+            </div>
+
+            <div class="zuik-col">
+                <button class="zuik-button js-switch-color-scheme">Switch color scheme</button>
             </div>
         </section>
         <section class="zuik-row">
@@ -235,6 +240,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        (() => {
+            const classNameDark = 'zuik__dark'; 
+            const classNameLight = 'zuik__light'
+            const mainContainer = document.body;
+            const btnColorShemaSwitch = document.querySelector('.js-switch-color-scheme');
+            
+            btnColorShemaSwitch.addEventListener('click', _ => {
+                const isDarkByDefault = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            
+                if (isDarkByDefault) {
+                    mainContainer.classList.toggle(classNameLight);
+                } else {
+                    mainContainer.classList.toggle(classNameDark);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
