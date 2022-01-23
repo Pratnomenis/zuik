@@ -19,8 +19,15 @@
 }
 
 :root {
+    color-scheme: light dark;
+
     @include light-consts;
 }
+
+::selection {
+    color: var(--zuik-color-bg-main);
+    background: var(--zuik-color-text-main);
+  }
 
 @media (prefers-color-scheme: dark) {
     :root {
